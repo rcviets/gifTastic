@@ -19,7 +19,7 @@ $(document).ready(function () {
         }
     }
     // Event Listener for all Buttons
-    $('.topicButtons').click(function () {
+    $(document).on('click', '.topicButtons', function () {
         $('#gifs-div').empty();
 
         var thisTopic = $(this).attr('data-name');
@@ -42,6 +42,7 @@ $(document).ready(function () {
                     var gifDiv = $('<div>')
                     var p = $('<p>').text("Rating: " + results[i].rating);
                     var gifImage = $('<img>');
+                    gifImage.addClass('gifImage');
                     gifImage.attr('src', results[i].images.fixed_height.url);
 
                     gifDiv.append(gifImage);
@@ -54,13 +55,13 @@ $(document).ready(function () {
     // Add a New Gif Topic
     $("#add-topic").click(function (event) {
         event.preventDefault();
-        var newTopic = $("#topic-input").val().trim();
+        var newTopic = $("#topic-input").val().trim().replace(/ /g, '_');
 
         topics.push(newTopic);
         topicButtons();
-
     });
 
     // Toggle Pause on Gifs
+
 
 });
