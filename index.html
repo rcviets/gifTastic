@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en us">
-    <head>
-        <title>Gif-Tastic!</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
-    <body background="assets/images/background1.jpg">
-        <div class="row">
-            <div class="col-md-12 justify-content-end" id="submit-div">
-                <!-- Submit Button -->
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis totam deserunt expedita quis consectetur animi necessitatibus qui cumque inventore magni nihil incidunt sit doloribus aperiam illo at, molestiae, dignissimos voluptates.</p>
-            </div>
+
+<head>
+    <title>Gif-Tastic!</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body background="assets/images/background1.jpg">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3 justify-right" id="submit-div">
+            <!-- Submit Button -->
+            <form id="topic-form">
+                <input type="text" id="topic-input">
+                <br>
+                <input id="add-topic" type="submit" value="Add Your Own!">
+            </form>
         </div>
-        <div class="row">
-            <div class="col-md-9" id="gifs-div">
-                <!-- GIF Div -->
-            </div>
-            <div class="col-md-3" id="buttons-div">
-                <!-- Buttons Div -->
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="gifs-div">
+            <!-- GIF Div -->
         </div>
+        <div class="col-md-3" id="buttons-div">
+            <!-- Buttons Div -->
+        </div>
+    </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="assets/javascript/app.js"></script>
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
 </html>

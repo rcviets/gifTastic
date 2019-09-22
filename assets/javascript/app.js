@@ -19,6 +19,7 @@ $(document).ready(function () {
     }
     // Event Listener for all Buttons
     $('.topicButtons').click(function () {
+        $('#gifs-div').empty();
         var thisTopic = $(this).attr('data-name');
         var queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=LXwFIEjBvFNKbrVWpPlCpIIj6rIB1A7A&q=" + 
         thisTopic + "&limit=10&offset=0&rating=G&lang=en";
@@ -40,7 +41,7 @@ $(document).ready(function () {
                     var p = $('<p>').text("Rating: " + results[i].rating);
                     var gifImage = $('<img>');
                     gifImage.attr('src', results[i].images.fixed_height.url);
-
+                    
                     gifDiv.append(gifImage);
                     gifDiv.append(p);
                     $('#gifs-div').prepend(gifDiv);

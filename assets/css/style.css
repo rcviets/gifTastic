@@ -5,3 +5,15 @@
     background-color: blueviolet;
     color: rgb(86, 236, 221);
 }
+p {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(86, 236, 221);
+}
+#topic-input {
+    margin: 10px;
+}
+#add-topic {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
