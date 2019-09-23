@@ -43,7 +43,9 @@ $(document).ready(function () {
                     var p = $('<p>').text("Rating: " + results[i].rating);
                     var gifImage = $('<img>');
                     gifImage.addClass('gifImage');
-                    gifImage.attr('src', results[i].images.fixed_height.url);
+                    gifImage.attr({'src': results[i].images.fixed_height_still.url, 
+                        'data-state': 'still', 'data-still': results[i].images.fixed_height_still.url, 
+                        'data-animate': results[i].images.fixed_height.url});
 
                     gifDiv.append(gifImage);
                     gifDiv.append(p);
@@ -62,6 +64,17 @@ $(document).ready(function () {
     });
 
     // Toggle Pause on Gifs
+    $(document).on('click', '.gifImage', function(){
+        var state = $(this).attr('data-state');
+
+        if (state === 'still') {
+            $(this).attr('src', $(this).attr('data-animate'));
+            $(this).attr('data-state', 'animate');
+        } else {
+            $(this).attr('src', $(this).attr('data-still'));
+            $(this).attr('data-state', 'still');
+        }
+    });
 
 
 });
