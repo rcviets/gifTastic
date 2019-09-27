@@ -1,1 +1,1 @@
-# gifTastic
+https://rcviets.github.io/gifTastic/
